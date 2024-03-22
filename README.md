@@ -17,3 +17,16 @@ utiliza apenas um processo para solicitações assíncronas
 iniciar projeto:
 npm init (permite algumas configurações)
 npm init -y (inicia com todos os valores padrão)
+
+#### Instalar typescript no pc:
+npm install -g typescript
+
+#### Iniciar arquivo de config do ts
+tsc --init
+
+#### Instalar dependências baseadas no package.json
+npm install
+
+#### Setar a pasta de monitoramento do typescript
+tsc -w (na pasta que estão os arquivos ts)
+Dessa forma será 'compilado' automaticamente para js na pasta dist
