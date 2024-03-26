@@ -4,7 +4,11 @@ import { Router, Request, Response } from 'express'
 const router = Router()
 
 router.get('/', (req: Request, res: Response) => {
-    res.send('Olá Mundo do Router')
+    // pegar os produtos do banco de dados
+    // organizar as informações desses produtos
+    // envia para o template engine
+
+    res.send('Olá Mundo do Router principal')
 })
 
 router.get('/contato', (req: Request, res: Response) => {
