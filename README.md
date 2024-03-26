@@ -105,6 +105,3 @@ if (validator.isLowercase(name)) {
 // nesse projeto, foi adicionado o script:
 // "start-dev": "nodemon src/index.ts"
 // para executar o live reload: npm run start-dev
-
-//
-

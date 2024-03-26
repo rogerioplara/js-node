@@ -1,15 +1,24 @@
 /*
 Criação do servidor com ExpressJS
+
+Teoria das rotas
+
 */
 // importação do express e dos tipos requset e response
 import express, { Request, Response } from 'express'
+import mainRoutes from './routes/index'
+import painelRoutes from './routes/painel'
 
-// instância do express na constante server
+// função do express na constante server
 const server = express()
 
-// criação da primeira rota com typescript
-server.get('/', (req: Request, res: Response) => {
-    res.send('Olá Mundo!')
+// inserção das rotas no servidor
+server.use('/', mainRoutes)
+server.use('/painel', painelRoutes)
+
+// executa caso não encontre a rota (inexistente)
+server.use((req: Request, res: Response) => {
+    res.status(404).send('Página não encontrada!')
 })
 
 // define a porta do servidor
