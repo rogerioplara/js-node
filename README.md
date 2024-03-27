@@ -35,7 +35,9 @@ Dessa forma será 'compilado' automaticamente para js na pasta dist
 npm install express // instala o expressjs
 npm install @types/express // instala os types do express
 
-
+## Template engine (mustache)
+npm install mustache-express
+npm install --save-dev @types/mustache-express
 
 /*
 Import e Export

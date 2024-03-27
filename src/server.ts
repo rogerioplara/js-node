@@ -7,11 +7,19 @@ Teoria das rotas
 // importação do express e dos tipos requset e response
 import express, { Request, Response } from 'express'
 import path from 'path'
+import mustache from 'mustache-express'
+
 import mainRoutes from './routes/index'
 import painelRoutes from './routes/painel'
 
 // função do express na constante server
 const server = express()
+
+// configuração do mustache
+server.set('view engine', 'mustache') // setando a view engine default
+server.set('views', path.join(__dirname, 'views')) // definindo a pasta onde ficarão as views
+server.engine('mustache', mustache()) // inicia o serviço
+
 
 // define uma pasta estática - torna publico
 // deve observar sempre o caminho de execução do servidor
